@@ -14,14 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let buttonColor = UIColor(red: 137/255, green: 196/255, blue: 80/255, alpha: 1)
 
-        let alertController = MyAlertController<String>(title: "Info", message: "Standart message, great info")
-        alertController.numberOfLines = 2
+        let alertController = MyAlertController<String>(title: "Warning", message: "To access the Mezzo functions you need to add a Mezzo.")
+        alertController.numberOfLines = 3
         //alertController.multipleSelection = true
         
-        let okAction = MyAlertAction<String>(title: "OK", type: ._default, completion: {items in
+        let addAction = MyAlertAction<String>(title: "ADD MEZZO", type: .default, completion: {items in
             print(items)
         })
-        okAction.textColor = buttonColor
+        addAction.textColor = buttonColor
         
         let cancelAction = MyAlertAction<String>(title: "CANCEL", type: .cancel, completion: nil)
         cancelAction.textColor = buttonColor
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         alertController.addOption(option: array.map {MyAlertOption(name: $0, item: $0)})
         
-        alertController.addAction(action: [okAction, cancelAction])
+        alertController.addAction(action: [cancelAction, addAction])
         self.navigationController!.present(alertController, animated: true, completion: nil)
     }
 

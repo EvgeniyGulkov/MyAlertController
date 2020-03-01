@@ -10,7 +10,7 @@ import UIKit
 
 enum MyActionType {
     case cancel
-    case _default
+    case `default`
 }
 
 class MyAlertAction<T> {
