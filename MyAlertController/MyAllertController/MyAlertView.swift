@@ -177,11 +177,13 @@ class MyAlert<T>: UIView, UITableViewDataSource, UITableViewDelegate {
     
     @objc
     private func selector(_ sender: UIButton) {
-        if let completion = self.actions[sender.tag].completion {
-            let selectedOptions = options.filter {$0.isSelected}
-            if !selectedOptions.isEmpty || !multipleSelection {
-                completion(selectedOptions.map{$0.item})
-            }
+        let action = self.actions[sender.tag]
+        let selectedOptions = options.filter {$0.isSelected}
+        if action.type == .cancel || options.isEmpty {
+            return action.completion!([])
+        }
+        if !selectedOptions.isEmpty {
+            action.completion!(selectedOptions.map{$0.item})
         }
     }
     
