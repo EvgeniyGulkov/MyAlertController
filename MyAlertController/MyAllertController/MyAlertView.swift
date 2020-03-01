@@ -23,15 +23,6 @@ class MyAlert<T>: UIView, UITableViewDataSource, UITableViewDelegate {
     
     var multipleSelection: Bool = false
     
-    var background: UIColor {
-        get {
-            return self.contentView.backgroundColor!
-        }
-        set {
-            self.contentView.backgroundColor = newValue
-        }
-    }
-    
     var baseBackgroundColor: UIColor {
         get {
             return contentView.backgroundColor!
