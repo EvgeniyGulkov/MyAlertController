@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let buttonColor = UIColor(red: 137/255, green: 196/255, blue: 80/255, alpha: 1)
 
-        let alertController = MyAlertController<String>(title: "Warning", message: "Do you want to continue the wizard on My-My_XXXX?")
+        let alertController = MyAlertController<String>(title: "Info", message: "Standart message, great info")
         alertController.numberOfLines = 2
         alertController.multipleSelection = true
         
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let cancelAction = MyAlertAction<String>(title: "CANCEL", type: .cancel, completion: nil)
         cancelAction.textColor = buttonColor
         
-        let array = ["Continue", "Cgyg", "My-3", "My-4"]
+        let array = ["option 1", "option 2", "option 3", "option 4"]
         
         alertController.addOption(option: array.map {MyAlertOption(name: $0, item: $0)})
         

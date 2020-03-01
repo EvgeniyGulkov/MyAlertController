@@ -16,7 +16,7 @@ class MyAlert<T>: UIView, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak private var buttonStackView: UIStackView!
     @IBOutlet weak private var alertTitle: UILabel!
     @IBOutlet weak private var messageLabel: UILabel!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak private var tableViewHeight: NSLayoutConstraint!
     
     var options: [MyAlertOption<T>] = []
     var actions: [MyAlertAction<T>] = []
@@ -194,9 +194,11 @@ class MyAlert<T>: UIView, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyAlertTableViewCell", for: indexPath) as! MyOptionTableViewCell
+        let option = options[indexPath.row]
         
-        cell.infoLabel.text = options[indexPath.row].name
-        cell.radioButton.isSelected = options[indexPath.row].isSelected
+        cell.infoLabel.text = option.name
+        cell.radioButton.isSelected = option.isSelected
+        cell.infoLabel.textColor = option.textColor
         return cell
     }
     

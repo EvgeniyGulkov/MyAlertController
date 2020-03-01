@@ -12,6 +12,7 @@ class MyAlertOption<T> {
     var name: String
     var item: T
     var isSelected: Bool = false
+    var textColor: UIColor = UIColor.white
     
     init(name: String, item: T) {
         self.name = name
