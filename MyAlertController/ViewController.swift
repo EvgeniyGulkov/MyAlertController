@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
         let alertController = MyAlertController<String>(title: "Info", message: "Standart message, great info")
         alertController.numberOfLines = 2
-        alertController.multipleSelection = true
+        //alertController.multipleSelection = true
         
         let okAction = MyAlertAction<String>(title: "OK", type: ._default, completion: {items in
             print(items)

@@ -23,6 +23,24 @@ class MyAlert<T>: UIView, UITableViewDataSource, UITableViewDelegate {
     
     var multipleSelection: Bool = false
     
+    var titleFont: UIFont {
+        get {
+            return self.alertTitle.font
+        }
+        set {
+            self.alertTitle.font = newValue
+        }
+    }
+    
+    var messageFont: UIFont {
+        get {
+            return self.messageLabel.font
+        }
+        set {
+            self.messageLabel.font = newValue
+        }
+    }
+    
     var baseBackgroundColor: UIColor {
         get {
             return contentView.backgroundColor!

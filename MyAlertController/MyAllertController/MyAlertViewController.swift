@@ -12,6 +12,24 @@ class MyAlertController<T>: UIViewController {
     private var alertView: MyAlert<T>!
     private var message: String!
     
+    var titleFont: UIFont {
+        get {
+            return self.alertView.titleFont
+        }
+        set {
+            self.alertView.titleFont = newValue
+        }
+    }
+    
+    var messageFont: UIFont {
+        get {
+            return self.alertView.messageFont
+        }
+        set {
+            self.alertView.messageFont = newValue
+        }
+    }
+    
     var numberOfLines: Int {
         get {
             return self.alertView.numberOfLines
@@ -43,21 +61,13 @@ class MyAlertController<T>: UIViewController {
         commonInit()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-    }
-    
     private func commonInit() {
+        self.view.backgroundColor = UIColor.clear
         self.modalPresentationStyle = .overFullScreen
         self.alertView.baseBackgroundColor = UIColor.black
         self.alertView.title = self.title!
         self.alertView.message = self.message
         self.view.addSubview(self.alertView)
-    }
-    
-    private func setupUI() {
-        self.view.backgroundColor = UIColor.clear
     }
 
     func addAction(action: [MyAlertAction<T>]) {
