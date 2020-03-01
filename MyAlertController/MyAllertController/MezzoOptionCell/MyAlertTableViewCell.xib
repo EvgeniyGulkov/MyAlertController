@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Walkway Expand Bold.ttf">
+            <string>WalkwayExpandBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyOptionTableViewCell" customModule="MezzoNewWizard" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyAlertTableViewCell" id="eiM-XT-g54" customClass="MyOptionTableViewCell" customModule="MezzoNewWizard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eiM-XT-g54" id="N6Z-N3-Et3">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-em-ZG4">
+                        <rect key="frame" x="59" y="13.5" width="335" height="17"/>
+                        <fontDescription key="fontDescription" name="WalkwayExpandBold" family="Walkway Expand Bold" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg7-IN-kc9">
+                        <rect key="frame" x="8" y="6.5" width="31" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vg7-IN-kc9" secondAttribute="height" multiplier="1:1" id="Cts-3H-KMJ"/>
+                        </constraints>
+                        <state key="normal" image="unchecked"/>
+                        <state key="selected" image="selected"/>
+                        <state key="highlighted" image="selected"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="U9d-em-ZG4" secondAttribute="trailing" constant="20" id="2Yi-Qk-nap"/>
+                    <constraint firstItem="vg7-IN-kc9" firstAttribute="height" secondItem="N6Z-N3-Et3" secondAttribute="height" multiplier="0.7" id="DHe-NF-Ev6"/>
+                    <constraint firstItem="vg7-IN-kc9" firstAttribute="centerY" secondItem="N6Z-N3-Et3" secondAttribute="centerY" id="EG0-yZ-LQi"/>
+                    <constraint firstItem="U9d-em-ZG4" firstAttribute="centerY" secondItem="N6Z-N3-Et3" secondAttribute="centerY" id="HbR-Y1-toM"/>
+                    <constraint firstItem="vg7-IN-kc9" firstAttribute="leading" secondItem="N6Z-N3-Et3" secondAttribute="leading" constant="8" id="ZMG-mq-9Ij"/>
+                    <constraint firstItem="U9d-em-ZG4" firstAttribute="leading" secondItem="vg7-IN-kc9" secondAttribute="trailing" constant="20" id="qPf-p0-3NV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="infoLabel" destination="U9d-em-ZG4" id="0uE-i6-85O"/>
+                <outlet property="radioButton" destination="vg7-IN-kc9" id="zHg-qC-NfX"/>
+            </connections>
+            <point key="canvasLocation" x="31.884057971014496" y="0.0"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="selected" width="20" height="20"/>
+        <image name="unchecked" width="20" height="20"/>
+    </resources>
+</document>
